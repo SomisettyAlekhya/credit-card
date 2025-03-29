@@ -1,0 +1,4 @@
+2025-03-26 10:40:27,615 - INFO - Columns with 0.1 variance : Index(['NPA Status', 'RevolvingUtilizationOfUnsecuredLines', 'age',
+       'NumberOfTime30-59DaysPastDueNotWorse', 'NumberOfTimes90DaysLate',
+       'NumberOfTime60-89DaysPastDueNotWorse'],
+      dtype='object')

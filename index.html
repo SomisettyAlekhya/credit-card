@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Customer Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: left;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Credit Card Customer Prediction</h2>
+        <form action="/predict" method="post">
+            <label for="feature0">Debt Ratio:</label>
+            <input type="number" step="any" name="feature0" required>
+
+            <label for="feature1">Number of Open Credit Lines and Loans:</label>
+            <input type="number" step="any" name="feature1" required>
+
+            <label for="feature2">Number of Real Estate Loans or Lines:</label>
+            <input type="number" step="any" name="feature2" required>
+
+            <label for="feature3">Monthly Income </label>
+            <input type="number" step="any" name="feature3" required>
+
+            <label for="feature4">Number of Dependent:</label>
+            <input type="number" step="any" name="feature4" required>
+
+            <label for="feature5">Education Level:</label>
+            <input type="number" step="any" name="feature5" required>
+
+            <label for="feature6">Region: Central</label>
+            <input type="number" step="any" name="feature6" required>
+
+            <label for="feature7">Region: East</label>
+            <input type="number" step="any" name="feature7" required>
+
+            <label for="feature8">Region: North</label>
+            <input type="number" step="any" name="feature8" required>
+
+            <label for="feature9">Region: West</label>
+            <input type="number" step="any" name="feature9" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <p class="result">Prediction: {{ prediction }}</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
